@@ -7,5 +7,11 @@ pipeline {
                 git credentialsId: '713f47c9-bf67-4699-a0cd-70e414819118', url: 'https://github.com/Bhavyagowd/gitJenkinsIntegration.git'
             }
         }
+        stage('Maven Build') {
+            steps {
+                echo "mvn clean package"
+             }
+        }
+        
     }
 }
